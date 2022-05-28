@@ -97,10 +97,12 @@ type company struct {
 func main() {
 
 	// Create a variable named admins of type adminlist.
-	var admins adminlist
+	var admins *adminlist
+	admins = &adminlist{}
 
 	// Create a variable named devs of type devlist.
-	var devs devlist
+	var devs *devlist
+	devs = &devlist{}
 
 	// Enqueue a new sysadmin onto admins.
 	admins.Enqueue(sysadmin{name: "sysadmin a"})
